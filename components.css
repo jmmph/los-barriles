@@ -1,0 +1,46 @@
+.menu-box,
+details.menu-box {
+  background-color: #fffafc;
+  border-radius: 16px;
+  box-shadow: 0 4px 12px rgba(255, 182, 193, 0.3);
+  padding: 1rem;
+  width: 280px;
+  text-align: left;
+  transition: all 0.3s ease;
+}
+
+.producto {
+  flex: 0 0 auto;
+  width: 220px;
+  background: linear-gradient(145deg, #fffaf0, #ffe0b2);
+  border-radius: 16px;
+  padding: 15px;
+  font-size: 0.9rem;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  scroll-snap-align: start;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.producto {
+  width: 220px;
+  margin: 0 auto;
+  background-color: #fffdf9;
+  border: 1px solid #e0dcd5;
+  border-radius: 12px;
+  padding: 1rem;
+  font-size: 0.9rem;
+  box-shadow: none;
+  text-align: left;
+  transition: transform 0.2s ease;
+}
+
+.producto:hover {
+  transform: translateY(-4px);
+}
+.producto:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+}
+
+
+
