@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Eventos - Los Barriles</title>
+
+<link rel="stylesheet" href="css/base.css">
+<link rel="stylesheet" href="css/layout.css">
+<link rel="stylesheet" href="css/components.css">
+<link rel="stylesheet" href="css/filters.css">
+  <link rel="stylesheet" href="css/style.css" />
+ <link rel="stylesheet" href="css/footer.css" />
+<link rel="stylesheet" href="css/logo.css" />
+
+
+ 
+</head>
+<body class="loaded">
+  <header>
+  <h1>🍺 Bar Los Barriles</h1>
+  <div id="menu"></div>
+</header>
+
+<script>
+  fetch('menu.html')
+    .then(res => res.text())
+    .then(html => {
+      document.getElementById('menu').innerHTML = html;
+    });
+</script>
+
+  <section id="eventos">
+    <h2>🎈 Próximos Eventos</h2>
+    <ul class="eventos-lista">
+      <li>🎤 Jueves de Karaoke - Todos los jueves a las 21:00</li>
+      <li>🍻 Noche de Tapas y Cerveza - Primer viernes de cada mes</li>
+      <li>🎶 Música en Vivo - Sábados desde las 20:30</li>
+      <li>🎨 Talleres para peques - Domingos por la mañana</li>
+    </ul>
+  </section>
+
+ 
+<footer>
+  <img src="img/Logo.png" alt=" Bar Los Barriles" class="logo-footer" />
+  <p>© 2025 Los Barriles. Todos los derechos reservados.</p>
+</footer>
+</body>
+</html>
