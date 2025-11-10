@@ -1,0 +1,111 @@
+:root {
+  --color-bebida-bg: rgba(0, 0, 0, 0.4); /* fondo oscuro semitransparente para mejor contraste */
+  --color-bebida-hover: rgba(255, 255, 255, 0.1);
+  --color-texto: #e42121;
+  --fuente-base: 'Segoe UI', sans-serif;
+}
+
+/* Fondo específico del bloque de bebidas */
+#bebidas {
+  background: url('/img/fondo.png') center/cover no-repeat;
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  font-family: var(--fuente-base);
+  color: var(--color-texto);
+  text-align: center;
+}
+
+/* Animación de entrada para categorías */
+.bebida-categoria {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+  padding: 20px 10px;
+  opacity: 0;
+  transform: translateY(10px);
+  transition: opacity 0.4s ease, transform 0.4s ease;
+}
+.bebida-categoria.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+.bebida-categoria::-webkit-scrollbar {
+  display: none;
+}
+
+/* Título principal */
+#titulo-bebidas {
+  text-align: center;
+  padding: 3rem 2rem;
+  background-color: #fff8f0;
+}
+#titulo-bebidas h2 {
+  font-size: 2.5rem;
+  font-family: 'Fredoka', sans-serif;
+  color: #333;
+  margin: 0;
+}
+
+/* Subtítulos internos (ya no usados en cervezas, pero útil para otras secciones) */
+.bebida-categoria h3 {
+  font-size: 1.4rem;
+  margin-top: 1rem;
+  color: #fff;
+  text-align: center;
+  text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.6);
+  font-family: 'Fredoka', sans-serif;
+}
+
+/* Tarjeta de bebida */
+.producto.bebida {
+  min-width: 180px;
+  background-color: var(--color-bebida-bg);
+  border-radius: 16px;
+  padding: 10px;
+  text-align: center;
+  scroll-snap-align: start;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s ease;
+}
+.producto.bebida:hover {
+  transform: scale(1.05);
+  background-color: var(--color-bebida-hover);
+}
+
+/* Título del producto */
+.producto.bebida h3 {
+  font-size: 1.1rem;
+  margin-bottom: 0.5rem;
+  color: #fff;
+  text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.6);
+}
+
+/* Precio y descripción */
+.producto.bebida p {
+  font-size: 1rem;
+  color: #fff;
+  line-height: 1.4;
+  text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.6);
+}
+
+/* Botón volver */
+.volver-inicio {
+  display: inline-block;
+  margin: 20px auto;
+  padding: 0.6rem 1.2rem;
+  background-color: #ffe0b2;
+  color: #4b2e2e;
+  font-weight: bold;
+  font-size: 1rem;
+  text-decoration: none;
+  border: 2px solid #ccc;
+  border-radius: 16px;
+  box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.3s, transform 0.2s;
+}
+.volver-inicio:hover {
+  background-color: #f5f5f5;
+  transform: scale(1.05);
+}
