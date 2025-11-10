@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contacto - Los Barriles</title>
+  <link rel="stylesheet" href="css/base.css">
+<link rel="stylesheet" href="css/layout.css">
+<link rel="stylesheet" href="css/components.css">
+<link rel="stylesheet" href="css/filters.css">
+  <link rel="stylesheet" href="css/style.css" />
+ <link rel="stylesheet" href="css/footer.css" />
+<link rel="stylesheet" href="css/logo.css" />
+
+  <link href="https://fonts.googleapis.com/css2?family=Fredoka&display=swap" rel="stylesheet" />
+</head>
+<body class="loaded">
+  <header>
+     <img src="img/Logo.png" alt=" Bar Los Barriles" class="logo-barriles" />
+     
+  <h1>🍺 Bar Los Barriles</h1>
+  <div id="menu"></div>
+</header>
+
+<script>
+  fetch('menu.html')
+    .then(res => res.text())
+    .then(html => {
+      document.getElementById('menu').innerHTML = html;
+    });
+</script>
+
+ <section id="contacto">
+  <h2>📞 Contáctanos</h2>
+  <form id="formulario-contacto">
+    <input type="text" placeholder="Tu nombre" required />
+    <input type="email" placeholder="Tu correo electrónico" required />
+    <textarea rows="5" placeholder="Escribe tu mensaje aquí..." required></textarea>
+    <button type="submit">Enviar mensaje</button>
+  </form>
+  <div id="mensaje-confirmacion" class="oculto">
+    <p>¡Gracias por tu mensaje, te contactaremos pronto! 🍻</p>
+  </div>
+</section>
+
+  <footer>
+  <img src="img/Logo.png" alt=" Bar Los Barriles" class="logo-footer" />
+  <p>© 2025 Los Barriles. Todos los derechos reservados.</p>
+</footer>
+<script>
+  const formulario = document.getElementById('formulario-contacto');
+  const mensaje = document.getElementById('mensaje-confirmacion');
+
+  formulario.addEventListener('submit', function(e) {
+    e.preventDefault();
+    mensaje.classList.remove('oculto');
+    formulario.reset();
+
+    // Ocultar el mensaje después de 5 segundos
+    setTimeout(() => {
+      mensaje.classList.add('oculto');
+    }, 3000);
+  });
+</script>
+</html>
