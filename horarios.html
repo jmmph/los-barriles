@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Horarios - Los Barriles</title>
+<link rel="stylesheet" href="css/base.css">
+<link rel="stylesheet" href="css/layout.css">
+<link rel="stylesheet" href="css/components.css">
+<link rel="stylesheet" href="css/filters.css">
+<link rel="stylesheet" href="css/footer.css">
+<link rel="stylesheet" href="css/horarios.css">
+<link rel="stylesheet" href="css/logo.css" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body class="loaded">
+  <header>
+   <img src="img/Logo.png" alt=" Bar Los Barriles" class="logo-barriles" />
+  <h1>🍺 Bar Los Barriles</h1>
+  <div id="menu"></div>
+</header>
+
+<script>
+  fetch('menu.html')
+    .then(res => res.text())
+    .then(html => {
+      document.getElementById('menu').innerHTML = html;
+    });
+</script>
+
+ <section class="horarios">
+  <h2>🕒 Horarios</h2>
+  <ul class="lista-horarios">
+    <li><span class="dia">Lunes</span><span class="cerrado">Cerrado por descanso del personal</span></li>
+    <li><span class="dia">Martes</span><span class="hora">7:00 am – 00:00</span></li>
+    <li><span class="dia">Miércoles</span><span class="hora">7:00 am – 00:00</span></li>
+    <li><span class="dia">Jueves</span><span class="hora">7:00 am – 00:00</span></li>
+    <li><span class="dia">Viernes</span><span class="hora">7:00 am – 00:00</span></li>
+    <li><span class="dia">Sábado</span><span class="hora">7:00 am – 00:00</span></li>
+    <li><span class="dia">Domingo</span><span class="hora">7:00 am – 00:00</span></li>
+  </ul>
+</section>
+    <footer>
+  <img src="img/Logo.png" alt=" Bar Los Barriles" class="logo-footer" />
+  <p>© 2025 Los Barriles. Todos los derechos reservados.</p>
+</footer>
+</body>

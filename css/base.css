@@ -1,0 +1,10 @@
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  font-family: 'Fredoka', sans-serif;
+  background-color: #fffafc;
+  color: #4b2e2e;
+}

@@ -1,0 +1,38 @@
+.hero-carta {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  background: url('../img/barr.png') center/cover no-repeat;
+  overflow: hidden;
+}
+
+.hero-carta::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.3);
+  z-index: 0;
+}
+
+.overlay-carta {
+  position: relative;
+  z-index: 1;
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 2rem;
+  text-align: center;
+  color: #fff;
+  border-radius: 12px;
+  max-width: 90%;
+}
+
+.overlay-carta h1 {
+  font-size: 3rem;
+  margin: 0;
+}
+
+.overlay-carta h2 {
+  font-size: 1.5rem;
+  margin-top: 0.5rem;
+}

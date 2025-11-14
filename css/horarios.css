@@ -1,0 +1,67 @@
+.horarios {
+  background-color: #fff8f0;
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  font-family: 'Nunito', sans-serif;
+  color: #6b4c3b; /* Marrón general */
+  text-align: center;
+}
+
+.horarios h2 {
+  font-size: 2rem;
+  color: #ffffff; /* Blanco puro para destacar */
+  text-align: center;
+  margin-bottom: 1.5rem;
+  text-shadow: 1px 1px 2px rgba(0,0,0,0.2); /* Sombra suave para legibilidad */
+}
+
+.lista-horarios {
+  list-style: none;
+  padding: 0;
+  margin: 0 auto;
+  max-width: 400px;
+}
+
+.lista-horarios li {
+  display: flex;
+  justify-content: center;
+  gap: 1rem; /* Menor separación entre día y hora */
+  padding: 0.6rem 1rem;
+  margin-bottom: 0.4rem;
+  background-color: #ffeaea;
+  border-radius: 8px;
+  transition: transform 0.2s ease;
+  font-size: 1rem;
+}
+
+.lista-horarios li:hover {
+  transform: scale(1.02);
+}
+
+.dia {
+  font-weight: bold;
+  color: #6b4c3b;
+}
+
+.hora {
+  color: #6b4c3b;
+}
+
+.cerrado {
+  color: #6b4c3b;
+  font-style: italic;
+  
+}
+.horarios {
+  background-image: url('/img/fondo.png');  
+  background-size: cover;
+  background-position: center;
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  font-family: 'Nunito', sans-serif;
+  color: #e4e9eb;
+  text-align: center;
+}
+

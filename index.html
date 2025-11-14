@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Los Barriles 🍻</title>
+
+  <!-- ENLACES A LOS CSS MODULARES -->
+  <!--  <link rel="stylesheet" href="style.css" />   -->
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/layout.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/filters.css">
+  <link rel="stylesheet" href="css/navigation.css">
+  <link rel="stylesheet" href="css/hero.css">
+  <link rel="stylesheet" href="css/footer.css">
+  <link rel="stylesheet" href="css/media.css">
+  <link rel="stylesheet" href="css/responsive.css">
+  <link rel="stylesheet" href="css/animations.css">
+  <link rel="stylesheet" href="css/logo.css" />
+  
+  <link rel="stylesheet" href="css/mobile.css">
+  
+
+
+  <link href="https://fonts.googleapis.com/css2?family=Fredoka&display=swap" rel="stylesheet" />
+</head>
+<body>
+
+<!-- Hero principal -->
+<section class="hero-index">
+
+  <div class="overlay">
+     <img src="img/Logo.png" alt=" Bar Los Barriles" class="logo-barriles" />
+    <h1>LOS BARRILES  </h1>
+    <h2>BAR & TAPAS</h2>
+   
+    
+  </div>
+</section>
+
+
+<!-- Carta modular -->
+<header>
+  
+  <section id="menu"></section>
+</header>
+
+<!-- Bienvenida y terraza -->
+<section id="bienvenida">
+  <h2>¡Bienvenidos a Los Barriles!</h2>
+  <p>Tapas, risas y buena vibra. Descubre nuestra carta y ven a brindar con nosotros 🍻✨</p>
+</section>
+
+
+
+<script>
+  fetch('menu.html')
+    .then(res => res.text())
+    .then(html => {
+      document.getElementById('menu').innerHTML = html;
+    });
+</script>
+
+<!-- Footer -->
+<footer>
+  <img src="img/Logo.png" alt=" Bar Los Barriles" class="logo-footer" />
+  <p>© 2025 Los Barriles. Todos los derechos reservados.</p>
+</footer>
+
+<script>
+  window.addEventListener('DOMContentLoaded', () => {
+    document.body.classList.add('loaded');
+  });
+</script>
+
+
+
+</body>
+</html>

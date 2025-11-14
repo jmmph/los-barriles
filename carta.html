@@ -1,0 +1,447 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Los Barriles - Carta</title>
+
+  <link rel="stylesheet" href="css/base.css">
+<link rel="stylesheet" href="css/layout.css">
+<link rel="stylesheet" href="css/components.css">
+<link rel="stylesheet" href="css/filters-base.css">
+<link rel="stylesheet" href="css/footer.css">
+<link rel="stylesheet" href="css/Bebidas.css">
+<link rel="stylesheet" href="css/responsive.css">
+ <link rel="stylesheet" href="css/carta.css">
+  <link rel="stylesheet" href="css/logo.css">
+
+  <link href="https://fonts.googleapis.com/css2?family=Fredoka&display=swap" rel="stylesheet" />
+<body class="loaded">
+
+  <section class="hero-carta">
+  <div class="overlay-carta">
+     <img src="img/Logo.png" alt=" Bar Los Barriles" class="logo-barriles" />
+    <h1>Descubre Nuestra Carta</h1>
+    <h2>Tapas, sabores y momentos para compartir</h2>
+  </div>
+</section>
+
+  <header>
+    
+    <div id="menu"></div>
+  </header>
+
+<script>
+  fetch('menu.html')
+    .then(res => res.text())
+    .then(html => {
+      document.getElementById('menu').innerHTML = html;
+    });
+</script>
+
+<section id="menu">
+  
+
+  <div class="menu-filtros">
+
+    <!-- 🍳 Sección de Botones -->
+<button class="filtro-btn btn-desayunos" onclick="mostrarSeccion('desayunos')">🍳 Desayunos</button>
+<button class="filtro-btn btn-bocadillos" onclick="mostrarSeccion('bocadillos')">🥖 Bocadillos & Montados</button>
+<button class="filtro-btn btn-tostas" onclick="mostrarSeccion('tostas')">🍞 Tostas</button>
+<button class="filtro-btn btn-hamburguesas" onclick="mostrarSeccion('hamburguesas')">🍔 Hamburguesas</button>
+<button class="filtro-btn btn-raciones" onclick="mostrarSeccion('bolleria')">🥐 Bolleria</button>
+<button class="filtro-btn btn-raciones" onclick="mostrarSeccion('raciones')">🍢 Raciones</button>
+<button class="filtro-btn btn-combinados" onclick="mostrarSeccion('combinados')">🍽️ Platos Combinados</button>
+<button class="filtro-btn btn-especiales" onclick="mostrarSeccion('especiales')">👨‍🍳 Platos Especiales</button>
+<button class="filtro-btn btn-ensaladas" onclick="mostrarSeccion('ensaladas')">🥗 Ensaladas</button>
+<button onclick="location.href='bebidas.html'" class="filtro-btn">🍹 Bebidas</button>
+
+   </div>
+  </div>
+  
+
+<!-- 🍳 Sección Desayunos -->
+
+ <section id="desayunos" class="bebida-categoria" style="display: none;">
+
+      <h2>Desayunos</h2>
+
+      <div class="menu-grid">
+      <div class="producto combinado">
+        <h3>Desayuno 1</h3>
+        <p>Café, bollería, porras, churros, barrita con tomate</p>
+        <p><strong>3,00 €</strong> / con zumo natural: <strong>5,00 €</strong></p>
+      </div>
+
+      <div class="producto combinado">
+        <h3>Desayuno 2</h3>
+        <p>Café, barrita con jamón</p>
+        <p><strong>4,50 €</strong> / con zumo natural: <strong>6,00 €</strong></p>
+      </div>
+
+      <div class="producto combinado">
+        <h3>Desayuno 3</h3>
+        <p>Café, media barrita con jamón</p>
+        <p><strong>3,80 €</strong> / con zumo natural: <strong>5,00 €</strong></p>
+      </div>
+
+      <div class="producto saludable">
+        <h3>Desayuno 4</h3>
+        <p>Barrita con aguacate, queso fresco o tomate</p>
+        <p><strong>3,50 €</strong></p>
+      </div>
+
+      <div class="producto individual">
+        <h3>Desayuno 5</h3>
+        <p>Pincho de tortilla</p>
+        <p><strong>3,00 €</strong></p>
+      </div>
+
+      <div class="producto combinado">
+        <h3>Desayuno 6</h3>
+        <p>Café, pincho de tortilla</p>
+        <p><strong>4,00 €</strong></p>
+      </div>
+
+      <div class="producto combinado">
+        <h3>Desayuno 7</h3>
+        <p>Café, sándwich mixto o croissant mixto</p>
+        <p><strong>5,00 €</strong></p>
+      </div>
+
+      <div class="producto bebida">
+        <h3>Desayuno 8</h3>
+        <p>Zumo de naranja natural</p>
+        <p><strong>3,00 €</strong></p>
+      </div>
+
+      <div class="producto saludable">
+        <h3>Desayuno 9</h3>
+        <p>Huevos revueltos</p>
+        <p><strong>3,00 €</strong></p>
+      </div>
+
+      <div class="producto saludable">
+        <h3>Desayuno 10</h3>
+        <p>Tortilla francesa</p>
+        <p><strong>3,00 €</strong></p>
+      </div>
+    </div>
+  </section>
+
+<!-- 🍳 Sección Raciones -->
+
+<section id="raciones" class="bebida-categoria" style="display: none;">
+
+      <h2>Raciones</h2>
+      <div class="menu-grid">
+
+    <div class="producto racion">
+      <h3>Calamares a la romana</h3>
+      <p>1/2: <strong>8,00 €</strong> / Ración: <strong>14,50 €</strong></p>
+    </div>
+
+    <div class="producto racion">
+      <h3>Sepia a la plancha</h3>
+      <p>Ración: <strong>12,90 €</strong></p>
+    </div>
+
+    <div class="producto racion">
+      <h3>Gambas al ajillo</h3>
+      <p>Ración: <strong>13,00 €</strong></p>
+    </div>
+
+    <div class="producto racion">
+      <h3>Anchoas con tomate</h3>
+      <p>Ración: <strong>12,00 €</strong></p>
+    </div>
+
+    <div class="producto racion">
+      <h3>Gambones a la plancha</h3>
+      <p>1/2: <strong>9,00 €</strong> / Ración: <strong>17,50 €</strong></p>
+    </div>
+
+    <div class="producto racion">
+      <h3>Chipirones</h3>
+      <p>1/2: <strong>5,00 €</strong> / Ración: <strong>9,50 €</strong></p>
+    </div>
+
+    <div class="producto racion">
+      <h3>Croqueta casera de jamón, rabo de toro o queso</h3>
+      <p>1/2: <strong>7,50 €</strong> / Ración: <strong>13,80 €</strong></p>
+    </div>
+
+    <div class="producto racion">
+      <h3>Patata mixta, bravas o alioli</h3>
+      <p>1/2: <strong>4,50 €</strong> / Ración: <strong>7,50 €</strong></p>
+    </div>
+
+    <div class="producto racion">
+      <h3>Ensaladilla rusa</h3>
+      <p>1/2: <strong>5,00 €</strong> / Ración: <strong>9,50 €</strong></p>
+    </div>
+
+    <div class="producto racion">
+      <h3>Huevos rotos con jamón, gulas o chistorra</h3>
+      <p>Ración: <strong>14,50 €</strong></p>
+    </div>
+
+    <div class="producto racion">
+      <h3>Lacón a la gallega</h3>
+      <p>Ración: <strong>13,50 €</strong></p>
+    </div>
+
+    <div class="producto racion">
+      <h3>Chuletas de cordero a la plancha</h3>
+      <p>Ración: <strong>18,00 €</strong></p>
+    </div>
+
+    <div class="producto racion">
+      <h3>Entrecot de 400g a la plancha</h3>
+      <p><strong>16,99 €</strong></p>
+    </div>
+  </div>
+</section>
+
+
+<!-- 🍳 Sección Platos Combinados -->
+
+<section id="combinados" class="bebida-categoria" style="display: none;">
+   
+    <h2>Platos Combinados</h2>
+      <div class="menu-grid">
+
+    <div class="producto combinado">
+      <h3>Combinado 1</h3>
+      <p>Filete de pollo a la plancha, patatas o ensalada</p>
+      <p><strong>8,00 €</strong></p>
+    </div>
+
+    <div class="producto combinado">
+      <h3>Combinado 2</h3>
+      <p>Cinta de lomo, huevo frito, patatas o ensalada</p>
+      <p><strong>8,00 €</strong></p>
+    </div>
+
+    <div class="producto combinado">
+      <h3>Combinado 3</h3>
+      <p>Filete de ternera a la plancha, patatas o ensalada</p>
+      <p><strong>8,00 €</strong></p>
+    </div>
+
+    <div class="producto combinado">
+      <h3>Combinado 4</h3>
+      <p>Panceta, bacon, huevo frito con patatas</p>
+      <p><strong>8,00 €</strong></p>
+    </div>
+  </div>
+</section>
+
+<!-- 🍳 Sección de bocadillos y Montados -->
+
+<section id="bocadillos" class="bebida-categoria" style="display: none;">
+
+      <h2>Bocadillos & Montados</h2>
+      <div class="menu-grid">
+
+    <div class="producto bocadillo">
+      <h3>Pollo y vegetales</h3>
+      <p>Bocadillo: <strong>8,00 €</strong> / Montado: <strong>4,00 €</strong></p>
+    </div>
+
+    <div class="producto bocadillo">
+      <h3>Bacon y queso</h3>
+      <p>Bocadillo: <strong>8,00 €</strong> / Montado: <strong>4,00 €</strong></p>
+    </div>
+
+    <div class="producto bocadillo">
+      <h3>Lomo con queso</h3>
+      <p>Bocadillo: <strong>8,00 €</strong> / Montado: <strong>4,00 €</strong></p>
+    </div>
+
+    <div class="producto bocadillo">
+      <h3>Jamón serrano</h3>
+      <p>Bocadillo: <strong>8,00 €</strong> / Montado: <strong>4,00 €</strong></p>
+    </div>
+
+    <div class="producto bocadillo">
+      <h3>Panceta</h3>
+      <p>Bocadillo: <strong>8,00 €</strong> / Montado: <strong>4,00 €</strong></p>
+    </div>
+
+    <div class="producto bocadillo">
+      <h3>Tortilla francesa</h3>
+      <p>Bocadillo: <strong>6,00 €</strong> / Montado: <strong>3,00 €</strong></p>
+    </div>
+
+    <div class="producto bocadillo">
+      <h3>Tortilla de patatas</h3>
+      <p>Bocadillo: <strong>7,00 €</strong> / Montado: <strong>3,50 €</strong></p>
+    </div>
+
+    <div class="producto bocadillo">
+      <h3>Calamares</h3>
+      <p>Bocadillo: <strong>8,00 €</strong> / Montado: <strong>4,00 €</strong></p>
+    </div>
+
+  </div>
+</section>
+
+  <!-- Tostas  -->
+
+<section id="tostas" class="bebida-categoria" style="display: none;">
+
+    <h2>Tostas</h2>
+    <div class="menu-grid">
+
+<div class="producto bebida">
+    <h3>Solomillo</h3>
+    <p><strong>8,50 €</strong></p>
+    <p>Solomillo, queso brie y cebolla caramelizada.</p>
+  </div>
+  <div class="producto bebida">
+    <h3>Salmón y Aguacate</h3>
+    <p><strong>8,50 €</strong></p>
+    <p>Salmón, aguacate y queso Filadelfia.</p>
+  </div>
+  <div class="producto bebida">
+    <h3>Gambas</h3>
+    <p><strong>8,50 €</strong></p>
+    <p>Gambas, alioli y rúcula.</p>
+  </div>
+  <div class="producto bebida">
+    <h3>Gulas</h3>
+    <p><strong>8,50 €</strong></p>
+    <p>Gulas al ajillo y alioli.</p>
+  </div>
+</div>
+</section>
+
+<!-- Hamburguesas  -->
+
+<section id="hamburguesas" class="bebida-categoria" style="display: none;">
+
+    <h2>Hamburguesas</h2>
+    <div class="menu-grid">
+
+    <div class="producto bebida">
+    <h3>De la casa</h3>
+    <p><strong>12,00 €</strong></p>
+    <p>Carne, tomate, lechuga, bacon, cebolla caramelizada y rulo de cabra.</p>
+  </div>
+
+  <div class="producto bebida">
+    <h3>Completa</h3>
+    <p><strong>10,00 €</strong></p>
+    <p>Carne, lechuga, tomate, queso, cebolla.</p>
+  </div>
+
+  <div class="producto bebida">
+    <h3>Pollo</h3>
+    <p><strong>9,00 €</strong></p>
+    <p>Pollo, lechuga, tomate, queso.</p>
+  </div>
+
+</div>
+</section>
+
+   <!-- Bolleria  -->
+
+<section id="bolleria" class="bebida-categoria" style="display: none;">
+  <h2>Bolleria</h2>
+    <div class="menu-grid">
+
+  <div class="producto bebida"><h3>Croasant a la plancha</h3><p>2,50 €</p></div>
+  <div class="producto bebida"><h3>Croasant solo</h3><p>2,00 €</p></div>
+  <div class="producto bebida"><h3>Napolitana de crema</h3><p>2,00 €</p></div>
+  <div class="producto bebida"><h3>Napolitana de chocolate</h3><p>2,00 €</p></div>
+  <div class="producto bebida"><h3>Churro</h3><p>0,70 €</p></div>
+  <div class="producto bebida"><h3>Porra</h3><p>0,90 €</p></div>
+  <div class="producto bebida"><h3>Barrita con tomate</h3><p>2,00 €</p></div>
+  <div class="producto bebida"><h3>Barrita con jamón</h3><p>3,50 €</p></div>
+  <div class="producto bebida"><h3>Media barrita con jamón</h3><p>2,80 €</p></div>
+  <div class="producto bebida"><h3>Barrita con tomate y aguacate</h3><p>3,80 €</p>
+  </div>
+</div>
+</section>
+
+ <!-- Platos Especiales  -->
+
+  <section id="especiales" class="bebida-categoria" style="display: none;">
+
+  <h2>Platos Especiales</h2>
+    <div class="menu-grid">
+
+  <div class="producto especial">
+    <h3>Flor de alcachofa con langostinos</h3>
+    <p><strong>15,00 €</strong><br><em>Alcachofa, langostinos, mayonesa</em></p>
+  </div>
+
+  <div class="producto especial">
+    <h3>Burrata con verdura a la plancha</h3>
+    <p><strong>15,00 €</strong><br><em>Queso, calabacín, berenjena, pimiento rojo, tomate y espárragos</em></p>
+  </div>
+
+  <div class="producto especial">
+    <h3>Pulpo en salsa</h3>
+    <p><strong>15,00 €</strong><br><em>Pulpo, patatas a la plancha y verduritas en salsa</em></p>
+  </div>
+
+  <div class="producto especial">
+    <h3>Tataki de ternera</h3>
+    <p><strong>15,00 €</strong><br><em>Lechuga, aguacate, tomate cherry</em></p>
+  </div>
+
+</div>
+</section>
+
+
+<!-- Ensaladas -->
+
+ 
+  <section id="ensaladas" class="bebida-categoria" style="display: none;">
+
+  <h2>Ensaladas</h2>
+    <div class="menu-grid">
+
+  <div class="producto ensalada">
+    <h3>De la casa</h3>
+    <p><strong>12,00 €</strong><br><em>Lechuga, tomate cherry, aguacate, queso fresco, pollo a la plancha y aceitunas</em></p>
+  </div>
+
+  <div class="producto ensalada">
+    <h3>Rulo de cabra</h3>
+    <p><strong>10,50 €</strong><br><em>Queso de cabra, rúcula, manzana verde, lechuga, nueces y tomate cherry</em></p>
+  </div>
+
+  <div class="producto ensalada">
+    <h3>César</h3>
+    <p><strong>10,50 €</strong><br><em>Pollo, lechuga, pan tostado, salsa César, queso parmesano, tomate cherry</em></p>
+  </div>
+
+  <div class="producto ensalada">
+    <h3>Caprese</h3>
+    <p><strong>10,50 €</strong><br><em>Queso mozzarella, tomate, albahaca y orégano</em></p>
+  </div>
+
+  <div class="producto ensalada">
+    <h3>Ventresca</h3>
+    <p><strong>10,50 €</strong><br><em>Ventresca, pimientos rojos y tomate</em></p>
+  </div>
+
+</div>
+</section>
+
+
+
+<footer>
+  <img src="img/Logo.png" alt=" Bar Los Barriles" class="logo-footer" />
+  <p>© 2025 Los Barriles. Todos los derechos reservados.</p>
+</footer>
+
+
+
+</script>
+<script src="script.js"></script>
+</body>
+</html>
